@@ -1,5 +1,11 @@
 plugins {
     kotlin("jvm") version "1.8.0"
+    kotlin("plugin.noarg") version "1.8.0"
+}
+
+noArg {
+    annotation("com.toy.basic.common.NoArg")
+    invokeInitializers = true
 }
 
 group = "com.toy"
