@@ -1,4 +1,4 @@
-package com.toy.basic.`27-reduce`
+package com.toy.basic.`27-reduce-fold`
 
 fun main() {
   val user1 = ReduceSampleUser(age = 30)
