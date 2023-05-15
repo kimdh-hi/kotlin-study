@@ -16,6 +16,9 @@ fun main() {
   println(result2)
 
 
+  val map1 = mapOf<String, String>("1" to "2")
+  val map2 = mapOf<String, String>("2" to "3")
+  println(map1 + map2)
 }
 
 data class CollectionToMapWithMultipleKeyTestVO(
