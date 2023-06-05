@@ -18,6 +18,15 @@ data class NoArgTest(
   val ab by lazy { a + b }
 }
 
+@NoArg
+data class NoArgWithEnum(
+  val data: NoArgTestEnum
+)
+
+enum class NoArgTestEnum {
+  AA, BB, CC
+}
+
 fun main() {
   val noArgTest = NoArgTest::class.java.getConstructor().newInstance()
   println(noArgTest.ab)
