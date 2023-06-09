@@ -2,6 +2,7 @@ package com.toy.core.`31-loop`
 
 /**
  * 결과값을 누적하기 위한 var 타입의 변수를 사용하는 경우 sumOf 등으로 확장함수를 사용하면 누적을 위한 변수를 제거 할 수 있음
+ * 대체-fold
  */
 fun main() {
 
@@ -17,6 +18,7 @@ fun main() {
 
   // sumOf
   val result2 = (1 until list.size).sumOf {
+    println(it)
     if (list[it] % 2 == 0) {
       list[it]
     } else {
