@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.8.22"
-    kotlin("plugin.noarg") version "1.8.22"
+    kotlin("jvm") version "1.9.0"
+    kotlin("plugin.noarg") version "1.9.0"
 }
 
 noArg {
