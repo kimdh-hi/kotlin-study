@@ -1,4 +1,4 @@
-package com.toy.core.`37-timezone`
+package com.toy.core.`38-ZonedDateTime`
 
 import java.time.LocalDateTime
 import java.time.ZoneId
@@ -6,7 +6,7 @@ import java.time.ZoneOffset
 import java.time.ZonedDateTime
 import java.time.zone.ZoneRulesException
 
-object TimezoneDateUtils {
+object TimezoneUtils {
 
   fun adjustTimezone(date: LocalDateTime, zoneId: ZoneId): LocalDateTime {
     val zonedDateTime = ZonedDateTime.of(date, ZoneOffset.UTC)
@@ -28,13 +28,13 @@ fun main() {
   val now = LocalDateTime.now()
   val zoneId = ZoneId.of("America/New_York")
 
-  val adjustDate = TimezoneDateUtils.adjustTimezone(now, zoneId)
+  val adjustDate = TimezoneUtils.adjustTimezone(now, zoneId)
 
   println(now)
   println(adjustDate)
 
   //####################
 
-  TimezoneDateUtils.getZoneId("America/New_York")
-  TimezoneDateUtils.getZoneId("zzzz")
+  TimezoneUtils.getZoneId("America/New_York")
+  TimezoneUtils.getZoneId("zzzz")
 }

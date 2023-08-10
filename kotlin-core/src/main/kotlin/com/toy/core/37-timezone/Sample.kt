@@ -5,25 +5,25 @@ import java.util.*
 private const val AVAILABLE_TIMEZONE_REGEX = "^(Africa|America|Asia|Atlantic|Australia|Europe)/.*"
 
 fun main() {
-  val timeZoneVOs = mutableListOf<TimeZoneVO>()
+  val timezoneVOS = mutableListOf<TimezoneVO>()
   TimeZone.getAvailableIDs().map { timeZoneId ->
     val timeZone = TimeZone.getTimeZone(timeZoneId)
     if (timeZoneId.matches(Regex(AVAILABLE_TIMEZONE_REGEX))) {
-      timeZoneVOs.add(TimeZoneVO.of(timeZone))
+      timezoneVOS.add(TimezoneVO.of(timeZone))
     }
   }
 
-  timeZoneVOs.forEach {
+  timezoneVOS.forEach {
     println(it)
   }
 }
 
-data class TimeZoneVO(
+data class TimezoneVO(
   val timeZone: String,
   val offset: Int,
 ) {
   companion object {
-    fun of(timeZone: TimeZone) = TimeZoneVO(
+    fun of(timeZone: TimeZone) = TimezoneVO(
       timeZone = timeZone.id,
       offset = timeZone.rawOffset / (60 * 60 * 1000)
     )

@@ -1,7 +1,6 @@
 package com.toy.core.`38-ZonedDateTime`
 
-import com.toy.core.`37-timezone`.TimeZoneVO
-import java.time.LocalDate
+import com.toy.core.`37-timezone`.TimezoneVO
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.ZoneOffset
@@ -12,11 +11,11 @@ import java.util.*
 private const val AVAILABLE_TIMEZONE_REGEX = "^(Africa|America|Asia|Atlantic|Australia|Europe)/.*"
 
 fun main() {
-  val timeZoneVOs = mutableListOf<TimeZoneVO>()
+  val timezoneVOS = mutableListOf<TimezoneVO>()
   TimeZone.getAvailableIDs().map { timeZoneId ->
     val timeZone = TimeZone.getTimeZone(timeZoneId)
     if (timeZoneId.matches(Regex(AVAILABLE_TIMEZONE_REGEX))) {
-      timeZoneVOs.add(TimeZoneVO.of(timeZone))
+      timezoneVOS.add(TimezoneVO.of(timeZone))
     }
   }
 
