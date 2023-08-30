@@ -1,9 +1,6 @@
 package com.toy.core.`38-ZonedDateTime`
 
-import java.time.LocalDateTime
-import java.time.ZoneId
-import java.time.ZoneOffset
-import java.time.ZonedDateTime
+import java.time.*
 import java.time.zone.ZoneRulesException
 
 object TimezoneUtils {
@@ -13,6 +10,9 @@ object TimezoneUtils {
     return zonedDateTime.withZoneSameInstant(zoneId).toLocalDateTime()
   }
 
+  fun adjustTimezone(timestamp: Long, zoneId: ZoneId): LocalDateTime {
+    return LocalDateTime.ofInstant(Instant.ofEpochMilli(timestamp), zoneId)
+  }
   fun getZoneId(zoneId: String) {
     try {
       ZoneId.of(zoneId)
@@ -35,6 +35,10 @@ fun main() {
 
   //####################
 
+  println("===================================")
   TimezoneUtils.getZoneId("America/New_York")
-  TimezoneUtils.getZoneId("zzzz")
+  val timestamp = System.currentTimeMillis()
+  val adjustDate2 = TimezoneUtils.adjustTimezone(timestamp, zoneId)
+  println(adjustDate2)
+  println(LocalDateTime.now())
 }
