@@ -40,7 +40,7 @@ fun main() {
 
   println("===================================")
 //  TimezoneUtils.getZoneId("America/New_York")
-  val timestamp = System.currentTimeMillis()
+  val timestamp = Instant.now().toEpochMilli()
   val adjustDate2 = TimezoneUtils.adjustTimezone(timestamp, "EST")
   println(adjustDate2)
   println(LocalDateTime.now())
