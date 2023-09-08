@@ -26,4 +26,5 @@ dependencies {
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
     languageVersion = "1.9"
+    freeCompilerArgs = listOf("-Xcontext-receivers")
 }

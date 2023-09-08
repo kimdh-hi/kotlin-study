@@ -1,7 +1,7 @@
 package com.toy.core.`41-context`
 
 fun main() {
-  val logger = Logger("main")
+  val logger = LoggerV1("main")
   with(logger) {
     with(Api()) {
       log(get())
@@ -11,11 +11,11 @@ fun main() {
   }
 }
 
-class Api {
+private class Api {
   fun get(): String = "api get"
 }
 
-class Logger(val name: String) {
+private class LoggerV1(val name: String) {
   fun log(s: String) {
     println("name: $s")
   }
