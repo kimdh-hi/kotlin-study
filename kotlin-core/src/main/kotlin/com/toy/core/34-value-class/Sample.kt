@@ -17,4 +17,6 @@ fun main() {
     val number1 = Number(1)
     val number2 = Number(1)
     println(number1 == number2) // true
+
+// println(number1 === number2) // === 연산자(객체 동등성) 지원 x (객체 자체를 생성하지 않는다고 하니 의미없는 연산자임)
 }
