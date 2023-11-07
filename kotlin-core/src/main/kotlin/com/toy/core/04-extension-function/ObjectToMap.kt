@@ -18,8 +18,7 @@ import kotlin.reflect.full.memberProperties
 
 // 확장함수 스타일
 fun <T : Any> T.toMap(): Map<String, Any?> {
-  val clazz = this::class as KClass<T>
-  return clazz.memberProperties.associate { prop ->
+  return (this::class as KClass<T>).memberProperties.associate { prop ->
     prop.name to prop.get(this)?.let { value ->
       if (value::class.isData) {
         value.toMap()
@@ -29,7 +28,6 @@ fun <T : Any> T.toMap(): Map<String, Any?> {
     }
   }
 }
-
 
 data class Test(
   val data: String,
