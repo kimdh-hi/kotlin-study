@@ -18,12 +18,12 @@ data class ConstructorTestVO(
 ) {
 
   init {
-    println("init...")
+    println("init...") // 1
   }
 
   var data2: String = when (type) {
     SomeType.AA -> {
-      println("AA")
+      println("AA") // 2
       "aa"
     }
     SomeType.BB -> {
@@ -32,7 +32,9 @@ data class ConstructorTestVO(
     }
   }
 
-  constructor(entity: ConstructorTestEntity): this(entity.data1, entity.type)
+  constructor(entity: ConstructorTestEntity): this(entity.data1, entity.type) {
+    println("constructor logic...") // 3
+  }
 }
 
 enum class SomeType {
