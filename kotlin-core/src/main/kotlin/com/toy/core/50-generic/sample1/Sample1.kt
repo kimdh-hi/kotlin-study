@@ -1,8 +1,8 @@
-package com.toy.core.`50-starProjections`
+package com.toy.core.`50-generic`.sample1
 
-open class Parent
-class Child1: Parent()
-class Child2: Parent()
+private open class Parent
+private class Child1: Parent()
+private class Child2: Parent()
 
 fun main() {
   val child1Array: Array<Child1> = arrayOf(Child1())
@@ -23,15 +23,15 @@ fun main() {
 //List 의 인터페이스 확인
 //List<out E>
 
-fun someFunction1(parents: Array<Parent>) {
+private fun someFunction1(parents: Array<Parent>) {
   parents[0] = Child2()
   println(parents.size)
 }
 
-fun someFunction2(parents: List<Parent>) {
+private fun someFunction2(parents: List<Parent>) {
   println(parents.size)
 }
 
-fun someFunction3(parents: MutableList<Parent>) {
+private fun someFunction3(parents: MutableList<Parent>) {
   println(parents.size)
 }
