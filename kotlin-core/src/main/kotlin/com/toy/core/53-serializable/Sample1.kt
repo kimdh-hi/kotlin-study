@@ -21,7 +21,9 @@ import kotlinx.serialization.json.Json
  * - spring 통합 가능 (KotlinSerializationJsonHttpMessageConverter 참고)
  * - jetbrain.. 유지보수 매우 잘 되는 듯 (https://github.com/Kotlin/kotlinx.serialization/releases)
  *   - 이건 jackson 라이브러리도 마찬가지임
+ * - 역직렬화시 기본 생성자 불필요 (jackson 의 경우 필수)
  *
+ * - 결론 굳이 jackson 을 대체할 필요까지는 없을 듯
  */
 
 fun main() {
@@ -61,6 +63,6 @@ data class SerializableTestInnerDto(
 
 @Serializable
 data class DeserializableTestDto(
-  val data1: String = "",
+  val data1: String= "",
   val data2: String = "default"
 )
