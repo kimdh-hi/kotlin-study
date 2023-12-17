@@ -25,6 +25,7 @@ dependencies {
     implementation("com.vdurmont:emoji-java:5.1.1")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.0")
 }
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
