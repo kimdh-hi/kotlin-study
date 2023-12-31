@@ -27,4 +27,8 @@ fun main() {
   println(localDateTime)
   println(convertedLocalDateTime)
 
+  println("=========")
+  println(LocalDateTime.now())
+  println(ZonedDateTime.now(ZoneId.of("America/New_York")).toLocalDateTime())
+
 }
