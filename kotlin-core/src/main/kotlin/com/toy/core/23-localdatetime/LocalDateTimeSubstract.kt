@@ -2,6 +2,7 @@ package com.toy.core.`23-localdatetime`
 
 import java.time.Duration
 import java.time.LocalDateTime
+import java.time.LocalTime
 
 fun main() {
   val endDate = LocalDateTime.of(2023, 4, 1, 1, 3, 0)
@@ -9,4 +10,6 @@ fun main() {
 
   val resultDuration = Duration.between(startDate, endDate)
   println(resultDuration.seconds)
+
+  println(LocalDateTime.now().with(LocalTime.MIN))
 }
