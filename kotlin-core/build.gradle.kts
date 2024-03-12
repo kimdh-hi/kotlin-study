@@ -23,6 +23,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("com.vdurmont:emoji-java:5.1.1")
+    runtimeOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.0")
