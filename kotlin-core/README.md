@@ -16,3 +16,7 @@ Kotlin 2.0 migration
 .kotlin 
 - 빌드 결과물 저장 경로
 - .gitignore 추가 필요
+
+
+
+https://kotlinlang.org/docs/whatsnew20.html
