@@ -8,6 +8,8 @@ fun main() {
 
   println(topicA.format())
   println(topicB.format())
+
+  println(Idp.GOOGLE.name)
 }
 
 enum class Idp {
