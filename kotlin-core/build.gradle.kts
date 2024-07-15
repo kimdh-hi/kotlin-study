@@ -27,6 +27,7 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("org.apache.commons:commons-math3:3.6.1")
     runtimeOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
