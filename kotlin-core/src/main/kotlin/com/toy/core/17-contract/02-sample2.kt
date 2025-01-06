@@ -4,7 +4,7 @@ import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.contract
 
 fun main() {
-  var name: String? = "kim"
+  val name: String? = "kim"
   checkName(name)
 
   val person = Person(name)
