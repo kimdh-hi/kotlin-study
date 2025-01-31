@@ -1,8 +1,8 @@
 
 plugins {
-    kotlin("jvm") version "2.0.0"
-    kotlin("plugin.noarg") version "2.0.0"
-    kotlin("plugin.serialization") version "2.0.0"
+    kotlin("jvm") version "2.1.0"
+    kotlin("plugin.noarg") version "2.1.0"
+    kotlin("plugin.serialization") version "2.1.0"
 }
 
 noArg {
@@ -36,7 +36,7 @@ dependencies {
 
 kotlin {
     compilerOptions {
-        languageVersion.set(org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_0)
-        apiVersion.set(org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_0)
+        languageVersion.set(org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_1)
+        apiVersion.set(org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_1)
     }
 }
