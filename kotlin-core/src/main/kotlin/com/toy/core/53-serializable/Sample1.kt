@@ -14,7 +14,6 @@ import kotlinx.serialization.json.Json
  * - @Serializable 를 붙여줘야 하는게 부담
  * - jackson 과 비교해서 성능성 유의미한 차이가 없다고 함 (2020 기준)
  *   https://www.ericthecoder.com/2020/11/23/benchmarking-kotlin-json-parsers-jackson-kotlin-and-kotlinx-serialization/
- * - 네이밍 전략이 default 가 camel case 임. snake case 사용하려면 @JsonName 으로 이름 지정 필요. 다른 글로벌한 설정 못 찾음
  *
  * 장점
  * - 내부적으로 reflection 을 사용하지 않음 (이로 인해 성능성 이점이 있을줄)
@@ -48,10 +47,7 @@ fun main() {
 @Serializable
 data class SerializableTestDto(
   val data1: String,
-
-  @SerialName("data_camel")
   val dataCamel: String,
-
   val list: List<String>,
   val inner: SerializableTestInnerDto
 )
