@@ -20,3 +20,23 @@ fun getUserStatus(userStatus: UserStatus) = when(userStatus) {
   is Disabled -> userStatus.printStatus()
   is Warning -> userStatus.printStatus()
 }
+
+/**
+ * // NoWhenBranchMatchedException
+ * // 컴파일 타임에 is 구문이 작성되지 않은 서브클래스에 대해 검증되므로 런타임에 발생되지 않겠지만 java 코드로 컴파일시 예외처리 들어가 있는 것 확인.
+ *    public static final void getUserStatus(@NotNull UserStatus userStatus) {
+ *       Intrinsics.checkNotNullParameter(userStatus, "userStatus");
+ *       if (userStatus instanceof Enabled) {
+ *          ((Enabled)userStatus).printStatus();
+ *       } else if (userStatus instanceof Disabled) {
+ *          ((Disabled)userStatus).printStatus();
+ *       } else {
+ *          if (!(userStatus instanceof Warning)) {
+ *             throw new NoWhenBranchMatchedException();
+ *          }
+ *
+ *          ((Warning)userStatus).printStatus();
+ *       }
+ *
+ *    }
+ */
